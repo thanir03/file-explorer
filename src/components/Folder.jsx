@@ -90,7 +90,7 @@ function Folder({ data }) {
         <button onClick={(event) => handleShowForm(event, false)}>
           File +
         </button>
-        <button onClick={handleEditForm}>Edit</button>
+        {!isRootDirectory && <button onClick={handleEditForm}>Edit</button>}
         {!isRootDirectory && <button onClick={handleDelete}>Delete</button>}
       </div>
       {isInputFieldShown && (
